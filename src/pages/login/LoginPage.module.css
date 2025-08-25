@@ -1,0 +1,160 @@
+.pageContainer {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: var(--font-family-sans);
+  background: var(--page-bg);
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-sm);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.appTitle {
+  color: var(--color-text-primary);
+}
+
+.logo {
+  background-color: var(--color-bg-inverse);
+  border-radius: var(--border-radius-md);
+  width: var(--spacing-lg);
+  height: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+    color: var(--color-text-inverse);
+  }
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+.formContainer {
+  max-width: var(--container-md);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background-color: var(--color-bg-primary);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--form-shadow);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+  background-color: var(--color-bg-inverse);
+  border: 1px solid var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  outline: none;
+}
+
+.submitButton:hover {
+  background-color: var(--color-bg-inverse-light);
+}
+
+.submitButton:focus-visible {
+  box-shadow: var(--focus-shadow);
+}
+
+.submitButtonLoading {
+  opacity: 0.8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.checkboxWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightSide {
+  flex: 1;
+}
+
+.sideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.loadingSpinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingMessage {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+}
+
+.input:disabled,
+.checkbox:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f9fafb;
+}
+
+@media (min-width: 640px) {
+  .formSection {
+    padding: var(--spacing-xl);
+  }
+}

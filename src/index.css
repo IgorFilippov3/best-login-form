@@ -1,0 +1,275 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+
+  --primary-50: #f8fafc;
+  --primary-100: #f1f5f9;
+  --primary-500: #0f172b;
+  --primary-600: #0f172a;
+  --primary-700: #020617;
+  --primary-800: #020617;
+  --primary-900: #020617;
+
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+
+  --green-500: #22c55e;
+
+  --font-family-sans: system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-normal: 1.5;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  --selection-color-rgb: 59, 130, 246;
+  --error-color-rgb: 239, 68, 68;
+
+  --min-touch-target: 44px;
+
+  --container-xs: 20rem;
+  --container-sm: 24rem;
+  --container-md: 28rem;
+}
+
+:root,
+[data-theme="light"] {
+  --color-primary: var(--primary-500);
+  --color-primary-hover: var(--primary-600);
+  --color-primary-text: var(--white);
+
+  --color-bg-primary: var(--white);
+  --color-bg-secondary: var(--gray-50);
+  --color-bg-tertiary: var(--gray-100);
+  --color-bg-inverse-light: var(--gray-800);
+  --color-bg-inverse: var(--gray-900);
+
+  --color-text-primary: var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-tertiary: var(--gray-500);
+  --color-text-inverse: var(--white);
+
+  --color-border-primary: var(--gray-200);
+  --color-border-secondary: var(--gray-300);
+  --color-border-focus: var(--blue-500);
+
+  --color-input-bg: var(--white);
+  --color-input-border: var(--gray-300);
+  --color-input-border-focus: var(--gray-300);
+  --color-input-placeholder: var(--gray-400);
+
+  --shadow: var(--shadow-lg);
+
+  --color-error-border: rgba(var(--error-color-rgb), 0.6);
+  --color-error-text: rgba(var(--error-color-rgb), 0.6);
+  --color-error-bg: rgba(var(--error-color-rgb), 0.1);
+  --color-error-focus: rgba(var(--error-color-rgb), 0.6);
+
+  --focus-shadow-error: 0 0 0 3px var(--color-error-focus);
+
+  --focus-shadow: 0 0 0 3px rgba(var(--selection-color-rgb), 0.6);
+
+  --form-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  --page-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+  --color-switcher-bg: rgba(15, 23, 42, 0.05);
+  --color-switcher-bg-hover: rgba(15, 23, 42, 0.1);
+  --color-switcher-border: var(--color-border-secondary);
+  --color-switcher-option-hover: var(--color-bg-secondary);
+  --color-switcher-option-active: rgba(59, 130, 246, 0.1);
+  --color-switcher-option-active-text: var(--blue-600);
+
+  --color-success: var(--green-500);
+  --color-success-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-confetti-gradient: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+
+  --shadow-success-icon: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-button-primary: 0 4px 15px rgba(102, 126, 234, 0.3);
+  --shadow-button-primary-hover: 0 6px 20px rgba(102, 126, 234, 0.4);
+  --shadow-button-secondary: 0 3px 10px rgba(255, 107, 107, 0.3);
+  --shadow-button-secondary-hover: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #1e40af;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-text: var(--white);
+
+    --color-bg-primary: var(--gray-900);
+    --color-bg-secondary: var(--gray-800);
+    --color-bg-tertiary: var(--gray-700);
+    --color-bg-inverse-light: var(--gray-100);
+    --color-bg-inverse: var(--white);
+
+    --color-text-primary: var(--gray-100);
+    --color-text-secondary: var(--gray-300);
+    --color-text-tertiary: var(--gray-400);
+    --color-text-inverse: var(--gray-900);
+
+    --color-border-primary: var(--gray-700);
+    --color-border-secondary: var(--gray-600);
+    --color-border-focus: var(--blue-500);
+
+    --color-input-bg: var(--gray-800);
+    --color-input-border: var(--gray-600);
+    --color-input-border-focus: var(--gray-600);
+    --color-input-placeholder: rgba(148, 163, 184, 0.5);
+
+    --color-success: var(--green-500);
+    --color-error: var(--red-500);
+
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+
+    --color-error-border: rgba(var(--error-color-rgb), 0.8);
+    --color-error-text: rgba(var(--error-color-rgb), 0.8);
+    --color-error-bg: rgba(var(--error-color-rgb), 0.2);
+    --color-error-focus: rgba(var(--error-color-rgb), 0.8);
+
+    --focus-shadow-error: 0 0 0 3px var(--color-error-focus);
+
+    --focus-shadow: 0 0 0 3px rgba(var(--selection-color-rgb), 0.8);
+
+    --form-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+    --page-bg: linear-gradient(135deg, #141b2d 0%, #334155 100%);
+
+    --color-switcher-bg: rgba(255, 255, 255, 0.08);
+    --color-switcher-bg-hover: rgba(255, 255, 255, 0.12);
+    --color-switcher-border: var(--color-border-primary);
+    --color-switcher-option-hover: rgba(255, 255, 255, 0.05);
+    --color-switcher-option-active: rgba(59, 130, 246, 0.15);
+    --color-switcher-option-active-text: #60a5fa;
+
+    /* Success page переменные для автоматической темной темы */
+    --color-success: var(--green-500);
+    --color-success-gradient: linear-gradient(135deg, #4c51bf 0%, #553c9a 100%);
+    --color-confetti-gradient: linear-gradient(135deg, #e53e3e 0%, #dd6b20 100%);
+
+    /* Тени для темной темы */
+    --shadow-success-icon: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --shadow-button-primary: 0 4px 15px rgba(76, 81, 191, 0.4);
+    --shadow-button-primary-hover: 0 6px 20px rgba(76, 81, 191, 0.5);
+    --shadow-button-secondary: 0 3px 10px rgba(229, 62, 62, 0.4);
+    --shadow-button-secondary-hover: 0 5px 15px rgba(229, 62, 62, 0.5);
+  }
+}
+
+[data-theme="dark"] {
+  --color-primary: #1e40af;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-text: var(--white);
+
+  --color-bg-primary: var(--gray-900);
+  --color-bg-secondary: var(--gray-800);
+  --color-bg-tertiary: var(--gray-700);
+  --color-bg-inverse-light: var(--gray-100);
+  --color-bg-inverse: var(--white);
+
+  --color-text-primary: var(--gray-100);
+  --color-text-secondary: var(--gray-300);
+  --color-text-tertiary: var(--gray-400);
+  --color-text-inverse: var(--gray-900);
+
+  --color-border-primary: var(--gray-700);
+  --color-border-secondary: var(--gray-600);
+  --color-border-focus: var(--blue-500);
+
+  --color-input-bg: var(--gray-800);
+  --color-input-border: var(--gray-600);
+  --color-input-border-focus: var(--gray-600);
+  --color-input-placeholder: rgba(148, 163, 184, 0.5);
+
+  --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+
+  --color-error-border: rgba(var(--error-color-rgb), 0.8);
+  --color-error-text: rgba(var(--error-color-rgb), 0.8);
+  --color-error-bg: rgba(var(--error-color-rgb), 0.2);
+  --color-error-focus: rgba(var(--error-color-rgb), 0.8);
+
+  --focus-shadow-error: 0 0 0 3px var(--color-error-focus);
+
+  --focus-shadow: 0 0 0 3px rgba(var(--selection-color-rgb), 0.8);
+
+  --form-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+  --page-bg: linear-gradient(135deg, #141b2d 0%, #334155 100%);
+
+  --color-switcher-bg: rgba(255, 255, 255, 0.08);
+  --color-switcher-bg-hover: rgba(255, 255, 255, 0.12);
+  --color-switcher-border: var(--color-border-primary);
+  --color-switcher-option-hover: rgba(255, 255, 255, 0.05);
+  --color-switcher-option-active: rgba(59, 130, 246, 0.15);
+  --color-switcher-option-active-text: #60a5fa;
+
+  /* Success page переменные для автоматической темной темы */
+  --color-success: var(--green-500);
+  --color-success-gradient: linear-gradient(135deg, #4c51bf 0%, #553c9a 100%);
+  --color-confetti-gradient: linear-gradient(135deg, #e53e3e 0%, #dd6b20 100%);
+
+  /* Тени для темной темы */
+  --shadow-success-icon: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-button-primary: 0 4px 15px rgba(76, 81, 191, 0.4);
+  --shadow-button-primary-hover: 0 6px 20px rgba(76, 81, 191, 0.5);
+  --shadow-button-secondary: 0 3px 10px rgba(229, 62, 62, 0.4);
+  --shadow-button-secondary-hover: 0 5px 15px rgba(229, 62, 62, 0.5);
+}
+
+*::selection {
+  color: var(--color-bg-primary);
+  background-color: var(--color-bg-inverse);
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: none;
+    --transition-normal: none;
+  }
+} */

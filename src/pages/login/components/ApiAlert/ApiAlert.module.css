@@ -1,0 +1,39 @@
+.container {
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: var(--border-radius-md);
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  color: var(--color-error-text);
+  font-size: var(--font-size-sm);
+  outline: none;
+}
+
+.alertIcon {
+  color: var(--color-error-text);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.errorHeading {
+  font-weight: var(--font-weight-semibold);
+}
+
+.errorMessage {
+  font-weight: var(--font-weight-medium);
+}
+
+.dismissButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  transition: all var(--transition-fast);
+  color: var(--color-bg-inverse);
+  margin: auto;
+}
+
+.dismissButton:focus-visible {
+  box-shadow: var(--focus-shadow);
+}
