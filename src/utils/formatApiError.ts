@@ -1,6 +1,6 @@
 const errorMap: Record<string, string> = {
-  "User not found": "We could not find an account with that email address.",
-  "Invalid password": "The password you entered is incorrect.",
+  "User not found": "Invalid email or password. Please try again.",
+  "Invalid password": "Invalid email or password. Please try again.",
   "Network error":
     "Unable to connect to our servers. Please check your internet connection and try again.",
   "Too many requests":
